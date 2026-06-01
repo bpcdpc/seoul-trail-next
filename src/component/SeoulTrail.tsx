@@ -1,7 +1,6 @@
 "use client";
 
 import { useKakaoLoader } from "react-kakao-maps-sdk";
-import { useState } from "react";
 
 import MainMap from "@/component/MainMap";
 import SideBar from "@/component/SideBar";
@@ -12,10 +11,7 @@ import RefreshButton from "@/component/RefreshButton";
 import Spinner from "@/component/Spinner";
 
 export default function SeoulTrail() {
-  // 렌더링을 조건을 위한 states
-  const [showMap, setShowMap] = useState(false);
-
-  // 맵 KEY 검사
+  // 지도 api KEY 검사
   const KAKAOMAP_API = process.env.NEXT_PUBLIC_KAKAOMAP_API_KEY;
 
   if (!KAKAOMAP_API)
@@ -45,21 +41,6 @@ export default function SeoulTrail() {
     return (
       <StatusScreen message={"지도 로드에 실패했습니다. 다시 시도해 주세요."}>
         <RefreshButton />
-      </StatusScreen>
-    );
-
-  // 랜딩 페이지
-  if (!showMap)
-    return (
-      <StatusScreen backgroundColor={"bg-blue-500"}>
-        <button
-          className="px-4 py-2 text-blue-600 bg-white rounded-md text-xl font-extrabold transition-all ease-in-out hover:scale-103"
-          onClick={() => {
-            setShowMap(true);
-          }}
-        >
-          SEOUL TRAIL
-        </button>
       </StatusScreen>
     );
 
