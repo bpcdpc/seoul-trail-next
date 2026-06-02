@@ -6,7 +6,7 @@ import RefreshButton from "@/component/RefreshButton";
 export default function Page() {
   return (
     <StatusScreen
-      message={"데이터를 가져오는데 실패했습니다. 다시 시도해 주세요."}
+      message={"시스템을 초기화하는데 실패했습니다. 다시 시도해 주세요."}
     >
       <RefreshButton />
     </StatusScreen>
