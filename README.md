@@ -2,7 +2,7 @@
 
 서울의 21개 둘레길에 대한 정보를 제공하는 웹서비스입니다.
 
-## Next.js, React, TypeScript, TailwindCss
+## Next.js, React, TypeScript, TailwindCss + Prisma ORM, Vercel
 
 ### 기존의 react vite 프로젝트를 Next.js로 포팅한 프로젝트입니다.
 

@@ -94,6 +94,16 @@ export default function SideBar() {
               </div>
             </div>
 
+            <div className="flex flex-col gap-1 text-sm">
+              <div className="text-slate-500">경유지점</div>
+              <div className="flex gap-2 flex-wrap">
+                {ROAD_DTL_NM.replaceAll(",", " - ")}
+                {/* {positions.map((p) => (
+                  <span>{p}</span>
+                ))} */}
+              </div>
+            </div>
+
             <div className="grid grid-flow-col grid-rows-2 gap-px w-full aspect-square rounded-lg overflow-hidden bg-gray-200">
               {images &&
                 images.length > 0 &&
@@ -112,15 +122,6 @@ export default function SideBar() {
                 ))}
             </div>
 
-            <div className="flex flex-col gap-1 text-sm">
-              <div className="text-slate-500">경유지점</div>
-              <div className="flex gap-2 flex-wrap">
-                {ROAD_DTL_NM.replaceAll(",", " - ")}
-                {/* {positions.map((p) => (
-                  <span>{p}</span>
-                ))} */}
-              </div>
-            </div>
             <div className="flex flex-col gap-1 text-sm">
               <div className="text-slate-500">스탬프함 위치</div>
               <div className="flex flex-wrap gap-1">
