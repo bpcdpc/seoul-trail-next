@@ -182,7 +182,7 @@ export default function MainMap() {
       <Map
         center={SEOUL_CENTER}
         isPanto={true}
-        className="w-screen h-screen"
+        className="w-screen h-dvh"
         level={9}
         ref={mapRef}
         zoomable={false}

@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState, useContext } from "react";
 import type { MergedItem, ImageItem } from "@/type/types";
 import { X } from "lucide-react";
 import { fetchImages } from "@/util/fetchData";
-import { setLevelClassName, removeHtml } from "@/util/miscFunctions";
+import { setLevelBgColor, removeHtml } from "@/util/miscFunctions";
 import { TrailStateContext } from "@/context/TrailStateContext";
 import { TrailDispatchContext } from "@/context/TrailDispatchContext";
 import Header from "./Header";
@@ -62,7 +62,7 @@ export default function SideBar() {
       ROAD_EXPLN,
     } = item;
 
-    const levelClassName = setLevelClassName(LV_KORN);
+    const levelBgColor = setLevelBgColor(LV_KORN);
     // const positions = ROAD_DTL_NM.split(",");
     const stampPositions = [STMP_PSTN_1, STMP_PSTN_2, STMP_PSTN_3];
     const sanitizedStampPositions = stampPositions.map((s) => removeHtml(s));
@@ -84,7 +84,7 @@ export default function SideBar() {
               <h4 className="text-slate-500">{ROAD_SUB_TTL}</h4>
               <div className="flex gap-2 items-center">
                 <span
-                  className={`bg-gray-400 text-white px-1.5 py-0.5 rounded-sm text-xs ${levelClassName}`}
+                  className={`bg-gray-400 text-white px-1.5 py-0.5 rounded-sm text-xs ${levelBgColor}`}
                 >
                   {LV_KORN} 코스
                 </span>

@@ -42,7 +42,7 @@ export default function TrailProvider({ infos }: TrailProviderProps) {
   return (
     <TrailDispatchContext.Provider value={dispatchValue}>
       <TrailStateContext.Provider value={state}>
-        <div className="relative w-screen h-screen overflow-hidden fade-in">
+        <div className="relative w-screen h-dvh overflow-hidden fade-in">
           <SeoulTrail />
         </div>
       </TrailStateContext.Provider>
