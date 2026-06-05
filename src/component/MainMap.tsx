@@ -170,7 +170,7 @@ export default function MainMap() {
   // 지도 초기화
   useEffect(() => {
     onMapInit();
-  }, [mapResetCount]); // 부모의 onAppInit이 실행되면 mapResetCount 값이 변경되고, 그것을 감지하여 지도를 초기화 한다.
+  }, [mapResetCount]); // 부모의 onAppInit이 실행되면 mapResetCount 값이 변경되고, 그것을 감지하여 지도를 초기화한다.
 
   // 마커가 선택될 때
   useEffect(() => {
@@ -185,7 +185,7 @@ export default function MainMap() {
         className="w-screen h-dvh"
         level={9}
         ref={mapRef}
-        zoomable={false}
+        // zoomable={false}
         onDragEnd={onDragEnd}
       >
         {infos.map((i) => (
