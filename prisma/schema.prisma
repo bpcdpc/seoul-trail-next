@@ -11,3 +11,68 @@ generator client {
   provider = "prisma-client"
   output   = "../src/generated/prisma"
 }
+enum Role {
+  USER
+  ADMIN
+}
+
+// model User {
+// id (int) PK auto_increment
+// email (string) notnull unique
+// pw (string)
+// name (string)
+// created_at (date) notnull
+// role (enum) default(USER)
+// trail_logs (TrailLog[])
+// }
+
+// model TrailLog {
+//   id (int) PK auto_increament
+//   content (string) notnull
+//   created_at (date) notnull
+//   author (User) notnull
+//   authorId (int) FK notnull
+//   altitude (number)
+//   latitude (number)
+//   longitude (number)
+//   road_no (int) latitude와 longitude가
+//                 21개 둘레길중 하나의 좌표 반경 이내로 들어가면
+//                 그 때 그 길의 번호가 들어가는 구조임.
+//                 그 길의 번호가 들어가면 SEOUL TRAIL 에서 발급하는 스탬프가 찍힐 수 있음
+// }
+
+// model User {
+//   id (int) PK auto_increament
+//   email (string) notnull unique
+//   name (string) notnull
+//   pw (string) notnull
+//   created_at (date) notnull
+//   role (string)
+//   trail_logs (TrailLog[]) default []
+// }
+
+// model TrailLog {
+//   id (int) PK auto_increament
+//   content (string) notnull
+//   created_at (date) notnull
+//   author (User) FK notnull
+//   altitude (number)
+//   latitude (number)
+//   longitude (number)
+//   trail_id (int)
+// }
+
+// model User {
+//   id    Int     @id @default(autoincrement())
+//   email String  @unique
+//   name  String?
+//   posts Post[]
+// }
+
+// model Post {
+//   id        Int     @id @default(autoincrement())
+//   title     String
+//   published Boolean @default(false)
+//   author    User?   @relation(fields: [authorId], references: [id])
+//   authorId  Int?
+// }

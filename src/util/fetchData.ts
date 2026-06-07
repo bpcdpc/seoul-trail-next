@@ -56,22 +56,6 @@ export async function fetchInfoItems(): Promise<InfoItem[]> {
   return infoRes.viewGil.row;
 }
 
-// 서울 열린 데이터 : 둘레길 선형 좌표
-// export async function fetchPathItems(): Promise<PathItem[]> {
-//   const url = `${process.env.NEXT_PUBLIC_SODATA_BASE_URL}/${process.env.NEXT_PUBLIC_SODATA_API_KEY}/json/SdeDoDreamWay01LW/1/100`;
-//   const pathRes: PathResponse | null = await fetchSOData<PathResponse>(url);
-//   if (!pathRes) throw new Error("둘레길 선형 좌표를 가져오지 못했습니다.");
-//   return pathRes.SdeDoDreamWay01LW.row;
-// }
-
-// 서울 열린 데이터 : 둘레길 점형 좌표
-// export async function fetchPointItems(): Promise<PointItem[]> {
-//   const url = `${process.env.NEXT_PUBLIC_SODATA_BASE_URL}/${process.env.NEXT_PUBLIC_SODATA_API_KEY}/json/SdeDoDreamWay01PW/1/200`;
-//   const pointRes: PointResponse | null = await fetchSOData<PointResponse>(url);
-//   if (!pointRes) throw new Error("둘레길 점형 좌표를 가져오지 못했습니다.");
-//   return pointRes.SdeDoDreamWay01PW.row;
-// }
-
 // 비동기 딜레이
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
